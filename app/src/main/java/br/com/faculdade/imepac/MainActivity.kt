@@ -15,13 +15,16 @@ import br.com.faculdade.imepac.ui.theme.ImepacTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Define o conteúdo da activity com o Compose
         setContent {
+            // Define o tema da aplicação
             ImepacTheme {
-                // A surface container using the 'background' color from the theme
+                // Superfície que contém o conteúdo da aplicação
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    // Chama a função Greeting para exibir uma mensagem na tela
                     Greeting("Android")
                 }
             }
@@ -29,6 +32,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// Função composable que exibe uma saudação
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -37,10 +41,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
+// Pré-visualização da saudação
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
+    // Define o tema para a pré-visualização
     ImepacTheme {
+        // Chama a função Greeting para a pré-visualização
         Greeting("Android")
     }
 }

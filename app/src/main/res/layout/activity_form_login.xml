@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo"/>
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/edit_email"
         style="@style/edit_text"
         android:drawableRight="@drawable/email"
         android:hint="E-mail"
@@ -50,10 +50,10 @@
         android:inputType="textPassword"
         android:maxLength="15"
         app:layout_constraintStart_toStartOf="@+id/containercomponens"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_entrada"
+        android:id="@+id/btn_entrada"
         style="@style/button"
         android:text="@string/entrar"
         app:layout_constraintEnd_toEndOf="@+id/containercomponens"
