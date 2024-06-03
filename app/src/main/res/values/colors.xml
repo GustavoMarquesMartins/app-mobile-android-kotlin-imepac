@@ -8,6 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+
+    <color name="red_deslogar">#D80700</color>
+    <color name="red_deslogar2">#E01600</color>
+    <color name="red_deslogar3">#940500</color>
+
+
+
     <color name="azul_imepac">#87CEFA</color>
     <color name="azul_imepac2">#4169E1</color>
 

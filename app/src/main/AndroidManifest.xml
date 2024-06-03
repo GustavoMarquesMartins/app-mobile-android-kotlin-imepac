@@ -28,6 +28,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".ListagemUsuarios"
+            android:exported="false" />
+
+        <activity
             android:name=".FormLogin"
             android:exported="true"
             android:label="Imepac">

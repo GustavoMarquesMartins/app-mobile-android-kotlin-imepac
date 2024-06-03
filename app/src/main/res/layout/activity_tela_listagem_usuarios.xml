@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+
+
+
+    <View
+        android:id="@+id/containercomponens"
+        style="@style/ContainerComponentes"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_margin="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/colunanome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/containercomponens"
+        app:layout_constraintEnd_toStartOf="@id/colunaemail"
+        app:layout_constraintTop_toTopOf="@id/containercomponens"
+        android:textAlignment="center"
+        android:layout_margin="25sp"
+
+        />
+
+    <TextView
+        android:id="@+id/colunaemail"
+        android:layout_width="0dp"
+        android:textSize="25dp"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/colunanome"
+        app:layout_constraintEnd_toEndOf="@id/containercomponens"
+        app:layout_constraintTop_toTopOf="@id/containercomponens"
+        android:layout_margin="25sp"
+        android:textAlignment="center"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="25sp"
+        android:id="@+id/listagem_usuarios"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/colunanome"
+        app:layout_constraintStart_toStartOf="@id/containercomponens"
+        app:layout_constraintEnd_toEndOf="@id/containercomponens"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

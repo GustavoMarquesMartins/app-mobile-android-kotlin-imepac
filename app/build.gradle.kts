@@ -60,6 +60,8 @@ dependencies {
     // Cloud Firestore
     implementation("com.google.firebase:firebase-firestore-ktx") //Google Firebase
 
+    implementation ("androidx.recyclerview:recyclerview:1.2.1") //RecyclerView(componente de listagem)
+
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.0")

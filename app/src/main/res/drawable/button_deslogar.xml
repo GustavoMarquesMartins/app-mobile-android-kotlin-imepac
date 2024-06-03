@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="20dp"/>
+    <gradient
+        android:startColor="@color/red_deslogar"
+        android:centerColor="@color/red_deslogar2"
+        android:endColor="@color/red_deslogar3"
+        />
+
+</shape>
