@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_livro">
+
+
+    <View
+        android:id="@+id/background_leaft_top"
+        style="@style/design_page_lef_top"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo_livro"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:contentDescription="Fachada da faculade imepac"
+        android:src="@drawable/img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background_leaft_top" />
+
+    <View
+        android:id="@+id/containercomponens"
+        style="@style/ContainerComponentes"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toTopOf="@id/background_righ_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_livro" />
+
+    <EditText
+        android:id="@+id/edit_nome_livro"
+        style="@style/edit_text"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@id/containercomponens"
+        app:layout_constraintStart_toStartOf="@+id/containercomponens"
+        app:layout_constraintTop_toTopOf="@id/containercomponens" />
+
+    <EditText
+        android:id="@+id/edit_preco"
+        style="@style/edit_text"
+        android:hint="Preço"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@id/containercomponens"
+        app:layout_constraintStart_toStartOf="@+id/containercomponens"
+        app:layout_constraintTop_toBottomOf="@id/edit_nome_livro" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_salvar"
+        style="@style/button_salvar"
+        android:text="@string/salvar"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@id/containercomponens"
+        app:layout_constraintStart_toStartOf="@id/containercomponens"
+        app:layout_constraintTop_toBottomOf="@id/edit_preco" />
+@@
+    <View
+        android:id="@+id/background_righ_top"
+        style="@style/design_page_right_bottom"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

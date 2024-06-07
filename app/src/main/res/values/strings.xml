@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Imepac</string>
     <string name="entrar">Entrar</string>
-    <string name="listagem">Listagem usuários</string>
+    <string name="salvar">Salvar</string>
+    <string name="listagem_livros">Listagem livros</string>
     <string name="ver_perfil">Ver perfil</string>
     <string name="text_cadastro">Crie uma conta clicando aqui</string>
 

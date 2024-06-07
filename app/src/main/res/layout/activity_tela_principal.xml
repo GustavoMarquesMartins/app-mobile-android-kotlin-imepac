@@ -35,7 +35,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_listagem"
         style="@style/button"
-        android:text="@string/listagem"
+        android:text="@string/listagem_livros"
         app:layout_constraintStart_toStartOf="@id/containercomponens"
         app:layout_constraintEnd_toEndOf="@id/containercomponens"
         app:layout_constraintTop_toBottomOf="@id/title_tela_principal"

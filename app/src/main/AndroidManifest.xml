@@ -14,37 +14,37 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activity_buscar_livro"
+            android:exported="false" />
         <activity
             android:name=".TelaPrincipal"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".TelaPerfil"
             android:exported="false" />
-
         <activity
             android:name=".FormCadastro"
             android:exported="false" />
-
         <activity
             android:name=".ListagemUsuarios"
             android:exported="false" />
-
+        <activity
+            android:name=".FormCadastroLivro"
+            android:exported="false" />
         <activity
             android:name=".FormLogin"
             android:exported="true"
             android:label="Imepac">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

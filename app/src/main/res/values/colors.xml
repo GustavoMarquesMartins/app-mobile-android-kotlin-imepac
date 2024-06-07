@@ -14,8 +14,9 @@
     <color name="red_deslogar3">#940500</color>
 
 
-
     <color name="azul_imepac">#87CEFA</color>
     <color name="azul_imepac2">#4169E1</color>
+
+    <color name="transparent">#00000000</color>
 
 </resources>
