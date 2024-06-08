@@ -60,7 +60,7 @@ class FormLogin : AppCompatActivity() {
                     progressBar.visibility = View.GONE
 
                     val user = FirebaseAuth.getInstance().currentUser
-                    val intent = Intent(this@FormLogin, ListagemLivros::class.java)
+                    val intent = Intent(this@FormLogin, TelaPrincipal::class.java)
                     startActivity(intent)
                 } else {
                     val mensagemErro = task.exception?.message

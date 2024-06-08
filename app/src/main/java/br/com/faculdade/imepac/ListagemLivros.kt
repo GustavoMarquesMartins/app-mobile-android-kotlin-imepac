@@ -43,6 +43,11 @@ class ListagemLivros : AppCompatActivity() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        fetchFirestoreData()
+    }
+
     private fun fetchFirestoreData() {
 
         val db = FirebaseFirestore.getInstance()
@@ -56,10 +61,10 @@ class ListagemLivros : AppCompatActivity() {
                     val livro = document.toObject(Livro::class.java)
                     livro?.let { itemList.add(it) }
                 }
-            adapter.notifyDataSetChanged()
-        }.addOnFailureListener { exception ->
-            Log.w("Error getting documents: ", exception)
-        }
+                adapter.notifyDataSetChanged()
+            }.addOnFailureListener { exception ->
+                Log.w("Error getting documents: ", exception)
+            }
     }
 
     private fun getBooksByNameAndId() {
@@ -78,7 +83,7 @@ class ListagemLivros : AppCompatActivity() {
                     adapter.notifyDataSetChanged()
                 }.addOnFailureListener { exception ->
                 }
-        }else{
+        } else {
             fetchFirestoreData()
         }
     }
