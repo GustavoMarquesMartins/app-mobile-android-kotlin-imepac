@@ -36,7 +36,7 @@ class TelaPrincipal : AppCompatActivity() {
     }
 
     fun listagem(){
-        val intent = Intent(this@TelaPrincipal, ListagemUsuarios::class.java)
+        val intent = Intent(this@TelaPrincipal, ListagemLivros::class.java)
         startActivity(intent)
     }
 

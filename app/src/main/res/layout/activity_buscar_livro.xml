@@ -6,71 +6,72 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_livro">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
 
-    <View
-        android:id="@+id/background_leaft_top"
-        style="@style/design_page_lef_top"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/campo_busca"
-        style="@style/edit_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:hint="Buscar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/containercomponens"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/background_leaft_top" />
+            <!-- Seus elementos de layout aqui -->
 
+            <EditText
+                android:id="@+id/campo_busca_livro_item"
+                style="@style/edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="50dp"
+                android:hint="Buscar"
+                app:layout_constraintBottom_toTopOf="@id/containercomponens"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <View
-        android:id="@+id/containercomponens"
-        style="@style/ContainerComponentes"
-        android:layout_width="0dp"
-        android:layout_height="400dp"
-        app:layout_constraintBottom_toTopOf="@id/background_righ_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+            <View
+                android:id="@+id/containercomponens"
+                style="@style/ContainerComponentes"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                app:layout_constraintBottom_toTopOf="@id/background_righ_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listagem_livros"
+                android:layout_width="0sp"
+                android:layout_height="400dp"
+                android:layout_margin="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/containercomponens"
+                app:layout_constraintEnd_toEndOf="@id/containercomponens"
+                app:layout_constraintStart_toStartOf="@id/containercomponens"
+                app:layout_constraintTop_toTopOf="@id/containercomponens" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_margin="25sp"
-        android:id="@+id/listagem_livros"
-        android:layout_width="0sp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/containercomponens"
-        app:layout_constraintStart_toStartOf="@id/containercomponens"
-        app:layout_constraintEnd_toEndOf="@id/containercomponens"/>
+            <TextView
+                android:id="@+id/link_cadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="50dp"
+                android:text="Ainda não cadastrou um livro?"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containercomponens" />
 
-    <TextView
-        android:id="@+id/link_cadastro"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textSize="20dp"
-        android:text="Ainda não cadastrou um livro?"
+            <View
+                android:id="@+id/background_righ_top"
+                style="@style/design_page_right_bottom"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        android:layout_margin="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/containercomponens"
-        />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <View
-        android:id="@+id/background_righ_top"
-        style="@style/design_page_right_bottom"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

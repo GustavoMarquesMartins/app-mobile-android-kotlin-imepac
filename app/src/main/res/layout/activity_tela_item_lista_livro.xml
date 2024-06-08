@@ -10,30 +10,30 @@
 
 
     <TextView
-        android:id="@+id/nome_usuario_lista"
+        android:id="@+id/item_nome_livro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/email_usuario_lista"
+        app:layout_constraintEnd_toStartOf="@id/item_preco_livro"
         app:layout_constraintTop_toTopOf="parent"
         android:paddingBottom="10sp"
-        android:text="nome"/>
+        android:text="Nome"/>
 
     <TextView
-        android:id="@+id/email_usuario_lista"
+        android:id="@+id/item_preco_livro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@id/nome_usuario_lista"
+        app:layout_constraintStart_toEndOf="@id/item_nome_livro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:paddingBottom="10sp"
-        android:text="email"/>
+        android:text="Preço"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

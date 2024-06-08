@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.compose.material3.Snackbar
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
@@ -16,7 +15,7 @@ class FormLogin : AppCompatActivity() {
 
     private lateinit var edit_email: EditText
     private lateinit var edit_senha: EditText
-    private lateinit var btn_entrada: Button
+    private lateinit var btn_entrada: TextView
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +45,10 @@ class FormLogin : AppCompatActivity() {
                 AutenticarUsuario();
             }
         }
+
+
     }
+
 
     fun AutenticarUsuario() {
         val email = edit_email.text.toString()
@@ -58,18 +60,16 @@ class FormLogin : AppCompatActivity() {
                     progressBar.visibility = View.GONE
 
                     val user = FirebaseAuth.getInstance().currentUser
-                    val intent = Intent(this@FormLogin, FormCadastroLivro::class.java)
+                    val intent = Intent(this@FormLogin, ListagemLivros::class.java)
                     startActivity(intent)
-                    finish()
                 } else {
                     val mensagemErro = task.exception?.message
-                        Snackbar.make(
-                            findViewById(android.R.id.content),
-                            "Erro ao autenticar usuário :$mensagemErro",
-                            Snackbar.LENGTH_LONG
-                        ).show()
-                    }
-
+                    Snackbar.make(
+                        findViewById(android.R.id.content),
+                        "Erro ao autenticar usuário :$mensagemErro",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                }
             }
     }
 

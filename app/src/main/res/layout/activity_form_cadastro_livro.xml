@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_livro">
+    android:background="@drawable/background_livro"
+    >
 
 
     <View
@@ -62,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="@id/containercomponens"
         app:layout_constraintStart_toStartOf="@id/containercomponens"
         app:layout_constraintTop_toBottomOf="@id/edit_preco" />
-@@
+
     <View
         android:id="@+id/background_righ_top"
         style="@style/design_page_right_bottom"

@@ -38,6 +38,14 @@ class FormCadastroLivro : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        if (isTaskRoot) {
+            moveTaskToBack(true)
+        } else {
+            super.onBackPressed()
+        }
+    }
+
     fun salvarLivro(it: View) {
         val db = FirebaseFirestore.getInstance()
         val nome = editNome.text.toString().trim()
@@ -50,18 +58,18 @@ class FormCadastroLivro : AppCompatActivity() {
             )
 
             db.collection("Livros").add(livro).addOnSuccessListener { documentReference ->
-                    val mensagemOk = "Cadastro realizado com sucesso!"
-                    val snackbar = Snackbar.make(
-                        it, mensagemOk, Snackbar.LENGTH_LONG
-                    )
-                    snackbar.show()
+                val mensagemOk = "Cadastro realizado com sucesso!"
+                val snackbar = Snackbar.make(
+                    it, mensagemOk, Snackbar.LENGTH_LONG
+                )
+                snackbar.show()
 
                 editNome.setText("")
                 editPreco.setText("")
 
-                }.addOnFailureListener { erro ->
-                    println("Ocorreu um erro ao adicionar documento $erro")
-                }
+            }.addOnFailureListener { erro ->
+                println("Ocorreu um erro ao adicionar documento $erro")
+            }
         } else {
             println("Erro ao tentar salvar!")
         }

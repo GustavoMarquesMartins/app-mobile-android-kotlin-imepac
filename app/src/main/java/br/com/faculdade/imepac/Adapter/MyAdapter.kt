@@ -5,27 +5,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import br.com.faculdade.imepac.Livro
 import br.com.faculdade.imepac.R
-import br.com.faculdade.imepac.User
 
 
-class MyAdapter(private val itemList: List<User>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class MyAdapter(private val itemList: List<Livro>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textViewNome: TextView = itemView.findViewById(R.id.nome_usuario_lista)
-        val textViewEmail: TextView = itemView.findViewById(R.id.email_usuario_lista)
+        val textViewNome: TextView = itemView.findViewById(R.id.item_nome_livro)
+        val textViewPreco: TextView = itemView.findViewById(R.id.item_preco_livro)
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_tela_item_lista_usuarios, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_tela_item_lista_livro, parent, false)
         return ViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = itemList[position]
         holder.textViewNome.text = currentItem.nome
-        holder.textViewEmail.text = currentItem.email
+        holder.textViewPreco.text = "R$:" + currentItem.preco
     }
 
     override fun getItemCount() = itemList.size
