@@ -15,6 +15,8 @@ class FormCadastroLivro : AppCompatActivity() {
     private lateinit var editNome: EditText
     private lateinit var editPreco: EditText
     private lateinit var btn_salvar: Button
+    private lateinit var btn_voltar: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form_cadastro_livro)
@@ -22,7 +24,7 @@ class FormCadastroLivro : AppCompatActivity() {
         editNome = findViewById(R.id.edit_nome_livro)
         editPreco = findViewById(R.id.edit_preco)
         btn_salvar = findViewById(R.id.btn_salvar)
-
+        btn_voltar = findViewById(R.id.btn_voltar)
 
         btn_salvar.setOnClickListener {
             val nome = editNome.text.trim()
@@ -35,6 +37,11 @@ class FormCadastroLivro : AppCompatActivity() {
             } else {
                 salvarLivro(it);
             }
+        }
+
+        btn_voltar.setOnClickListener {
+            val intent = Intent(this, ListagemLivros::class.java)
+            startActivity(intent)
         }
     }
 

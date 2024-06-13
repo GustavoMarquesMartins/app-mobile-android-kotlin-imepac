@@ -7,6 +7,18 @@
     android:background="@drawable/background_livro"
     >
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_voltar"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:drawableRight="@drawable/seta"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background_leaft_top"
+        android:padding="10dp"
+        />
 
     <View
         android:id="@+id/background_leaft_top"
